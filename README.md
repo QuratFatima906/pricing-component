@@ -10,7 +10,7 @@ This is a solution to the [Pricing component with toggle challenge on Frontend M
   - [The challenge](#the-challenge)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [Live] (#live)
+  - [Live](#live)
 - [Author](#author)
 
 ## Overview
