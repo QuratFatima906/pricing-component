@@ -10,6 +10,7 @@ This is a solution to the [Pricing component with toggle challenge on Frontend M
   - [The challenge](#the-challenge)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [Live] (#live)
 - [Author](#author)
 
 ## Overview
@@ -30,6 +31,10 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - Mobile-first workflow
+
+### Live
+
+- Live Solution - [Pricing Component](https://quratfatima906.github.io/pricing-component/)
 
 ### Author
 
