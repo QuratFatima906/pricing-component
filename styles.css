@@ -1,0 +1,249 @@
+/* #f7f7ff background*/
+/* #70728d heading*/
+/* #b7b7c4 secondary heading */
+
+/* - Very Light Grayish Blue: hsl(240, 78%, 98%)
+- Light Grayish Blue: hsl(234, 14%, 74%)
+- Grayish Blue: hsl(233, 13%, 49%)
+- Dark Grayish Blue: hsl(232, 13%, 33%) */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+.background {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+}
+.header .heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #70728d;
+  text-align: center;
+}
+.toogle-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  color: hsl(234, 14%, 74%);
+  font-size: 14px;
+  font-weight: 500;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 0 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-image: linear-gradient(
+    to right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px hsl(228, 45%, 44%);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  color: hsl(233, 13%, 49%);
+  font-size: 14px;
+  font-weight: 600;
+  height: auto;
+}
+
+.card-container .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 380px;
+  width: 280px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 10px 0 20px rgba(204, 204, 204, 0.5);
+  padding: 2rem;
+}
+.card-container .card-selected {
+  box-shadow: none;
+  height: 90%;
+  color: #fff;
+  background-image: linear-gradient(
+    to bottom,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  height: 420px;
+}
+.card .title {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+.card .price {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
+  color: hsl(232, 13%, 33%);
+  border-bottom: 1px solid hsl(234, 14%, 74%, 0.2);
+}
+.card .price span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 5px;
+}
+.card .specs {
+  width: 100%;
+  /* padding: 1rem 0; */
+  border-bottom: 1px solid hsl(234, 14%, 74%, 0.2);
+}
+
+.btn-primary {
+  margin: 1rem;
+  width: 80%;
+  height: 1.7rem;
+  background-image: linear-gradient(
+    to right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.btn-primary:hover {
+  background: #fff;
+  border: 1px solid hsl(237, 63%, 64%);
+  cursor: pointer;
+  color: hsl(237, 63%, 64%);
+}
+.btn-selected {
+  margin-top: 2rem;
+  width: 80%;
+  height: 1.7rem;
+  background: #fff;
+  border: none;
+  border-radius: 4px;
+  color: hsl(237, 63%, 64%);
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.btn-selected:hover {
+  background: hsl(237, 63%, 64%);
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #fff;
+}
+
+.card-selected .specs {
+  border-bottom: 1px solid #ffffff50;
+}
+.card-selected .price {
+  color: #fff;
+  border-bottom: 1px solid #ffffff50;
+}
+.image-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.image-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@media screen and (min-width: 480px) {
+  .background {
+    height: auto;
+    padding: 2rem;
+  }
+  .card-container {
+    width: 80%;
+  }
+  .card {
+    margin: 0 0 15px 0;
+  }
+  .card-container .card-selected {
+    box-shadow: 10px 0 20px rgba(204, 204, 204, 0.5);
+  }
+}
